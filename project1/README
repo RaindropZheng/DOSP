@@ -1,0 +1,20 @@
+Problem:
+change a string into SHA256 hashcode, find the required number of leading 0 and print the result.
+
+How to use:
+We built this project on Visual Studio for Mac, and we have two files, one is 
+LocalClient, and one is LocalServer.
+1. LocalClient is for finding the strings that the hash values have the n leading 
+0, which n is got from server.
+1.1 First in the client command line, we need to input filename + IP 
+address. Ex, localClient localhost
+1.2 Function cal_hash is used for calculating hash values
+1.3 Function ranStr is used for generating the random string with a length 
+of n
+1.4 ActorList is used for finding the results and sending them to server. 
+Results are like “changzhou;yudizheng; ”+string+hash_value
+1.5 We use localClient to send and receive message from server. The 
+message we send are address of server and calculation results. The 
+message we receive from server is the number of leading 0
+2. LocalServer is for printing the results
+2.1 We use localServer to send and receive message from client.
